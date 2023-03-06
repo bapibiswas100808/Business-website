@@ -42,3 +42,18 @@
 .footer-bottom span{
     color: #FF3E55;
 }
+
+@media (max-width:991px){
+    .footer-bottom p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:575px){
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+    .footer-bottom p{
+        text-align: center;
+    }
+}

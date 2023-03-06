@@ -5,16 +5,15 @@
     background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2021/08/footer-bg-1.png);
     background-size: cover;
 }
-
-.footer-top button{
-    background-color: #FF3E55;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #ffffff;
-}
 .top-one{
-    margin-right: 20px;
+    margin-right: 100px;
+}
+.top-two ul{
+    padding-left: 0;
+}
+.top-two ul li{
+    margin-bottom: 10px;
+    list-style: none;
 }
 .footer-top h3{
     position: relative;
@@ -39,4 +38,39 @@
     position: absolute;
     z-index: 1;
     background-color: #FF3E55;
+}
+.footer-top button{
+    background-color: #FF3E55;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+@media (max-width:991px){
+    .top-one{
+        margin-bottom: 30px;
+    }
+    .top-two{
+        margin-bottom: 30px;
+    }
+    .top-three{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:575px){
+    .footer-top{
+        text-align: center;
+    }
+    .top-one{
+        margin-right: 0;
+    }
+    .footer-top h3::before{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-top h3::after{
+        left: 20% !important;
+    }
 }

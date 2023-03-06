@@ -16,7 +16,8 @@ const FooterTop = () => {
                     </div>
                     </Col>
                     <Col lg={4}>
-                        <h3>Services</h3>
+                    <div className='top-two'>
+                    <h3>Services</h3>
                         <ul>
                             <li>Business Consulting</li>
                             <li>Content Creation and Marketing</li>
@@ -25,11 +26,14 @@ const FooterTop = () => {
                             <li>Marketing and Advertising</li>
                             <li>Virtual Assistance</li>
                         </ul>
+                    </div>
                     </Col>
                     <Col lg={4}>
-                        <h3>Subscribe Us</h3>
-                        <p>Get each and every latest news & update about our Corpkit without any delay by subscribing to us.</p>
-                        <button>Subscribe!</button>
+                    <div className='top-three'>
+                    <h3>Subscribe Us</h3>
+                    <p>Get each and every latest news & update about Essons without any delay by subscribing to us.</p>
+                    <button>Subscribe!</button>
+                    </div>
                     </Col>
                 </Row>
             </Container>
