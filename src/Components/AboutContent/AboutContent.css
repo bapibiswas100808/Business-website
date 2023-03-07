@@ -1,0 +1,35 @@
+.about-content-area{
+    padding: 80px 0;
+}
+.about-image img{
+    border-radius: 10%;
+}
+.about-text h5{
+    color: #ff3e55;
+}
+.about-text h2{
+    color: #0d1e50;
+    font-size: 30px;
+}
+.about-text p{
+    color: #5e6a70;
+}
+.about-text h4{
+    font-size: 18px;
+    border-left: 4px solid #ff3e55;
+    padding: 10px 0;
+    color: #0d1e50;
+}
+.about-text span{
+    color: #ff3e55;
+}
+.sign-text h3{
+    color: #0d1e50;
+    font-size: 20px;
+}
+.sign-text h6{
+    color: #ff3e55;
+}
+.sign-image{
+    border-right: 1px solid #b7b2b2;
+}

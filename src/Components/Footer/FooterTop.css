@@ -18,6 +18,7 @@
 .footer-top h3{
     position: relative;
     padding-bottom: 20px;
+    color: #ffffff;
 }
 .footer-top h3::before{
     content: "";
@@ -38,6 +39,9 @@
     position: absolute;
     z-index: 1;
     background-color: #FF3E55;
+}
+.footer-top p{
+    color: #ffffff;
 }
 .footer-top button{
     background-color: #FF3E55;

@@ -17,3 +17,10 @@ code {
 body{
   font-family: 'Roboto Slab', serif !important;
 }
+p{
+  color: #8a969c;
+}
+h1,h2,h3{
+  color: #0d1e50;
+}
+

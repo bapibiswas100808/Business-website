@@ -1,0 +1,22 @@
+
+.single-blog{
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-radius: 0 0 10px 10px;
+}
+.blog-text{
+    background-color: #0d1e50;
+    min-height: 230px;
+    padding: 20px 20px;
+    border-radius: 0 0 10px 10px;
+}
+.blog-text h3{
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+.single-blog .blog-text p{
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
