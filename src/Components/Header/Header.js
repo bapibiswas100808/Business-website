@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 import Logo from "../../images/logo.png";
 import "./Header.css";
 
@@ -19,11 +20,11 @@ const Header = () => {
             style={{ maxHeight: '300px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className='me-4'>Home</Nav.Link>
-            <Nav.Link href="#action2" className='me-4'>About</Nav.Link>
-            <Nav.Link href="#action3" className='me-4'>Services</Nav.Link>
-            <Nav.Link href="#action4" className='me-4'>Contact</Nav.Link>
-            <Nav.Link href="#action5" className='me-4'>Blog</Nav.Link>
+            <NavLink to="/" className='me-4 nav-link'>Home</NavLink>
+            <NavLink to="/about" className='me-4 nav-link'>About</NavLink>
+            <NavLink to="/" className='me-4 nav-link'>Services</NavLink>
+            <NavLink to="/" className='me-4 nav-link'>Contact</NavLink>
+            <NavLink to="/blog" className='me-4 nav-link'>Blog</NavLink>
             <Button>Get In Touch</Button>
           </Nav>
         </Navbar.Collapse>
