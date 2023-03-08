@@ -32,7 +32,6 @@
 
 @media (max-width:1199px){
     .sub-header img{
-        width: 100%;
         height: calc(100vh - 100px);
     }
 
@@ -40,8 +39,7 @@
 
 @media (max-width:575px){
 .sub-header img{
-    width: 100%;
-    height: calc(100vh - 100px);
+    height: 300px;
 }
 .sub-text{
     top:40% ;
