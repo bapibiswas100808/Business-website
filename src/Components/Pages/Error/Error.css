@@ -1,0 +1,23 @@
+.error-text{
+    padding: 100px 0;
+}
+.error-text h3{
+    color: #ff3e55;
+    font-size: 30px;
+}
+.error-text a{
+    text-decoration: none;
+    background-color: #ff3e55;
+    color: #ffffff;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.error-text a:hover{
+    color: #ffffff;
+    background-color: #0d1e50;
+}

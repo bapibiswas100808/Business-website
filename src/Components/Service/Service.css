@@ -63,6 +63,11 @@
     border-radius: 5px;
     padding: 5px 10px;
     color: #ffffff;
+    transition: 0.3s;
+}
+.service-button:hover{
+    background-color: #ffffff;
+    color: #FF3E55;
 }
 
 @media (max-width:1199px){

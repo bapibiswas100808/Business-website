@@ -17,13 +17,13 @@ const AboutContent = () => {
                         </div>
                     </Col>
                     <Col lg={6}>
-                        <div className='about-text ps-5 pt-3'>
+                        <div className='about-text ps-4 pt-3'>
                             <h5>\ About Us \</h5>
                             <h2>One Of The Fastest Way To Gain Business Success</h2>
                             <p>Essons is a global management consulting service company. Corpkit has the trusted advisor to the world's leading businesses, finance, and institutions. Corpkit Business Consulting WP Theme is the most modern and feature-rich Theme. This Business Consulting WP Theme is designed for various business and consulting services.</p>
                             <h4 className='ps-4'><b>Helped Fund <span>78,743</span> Projects in <span>30</span>  Countries, Benefiting Over <span>7.6 m</span> Million People.</b></h4>
                         </div>
-                        <section className='sign d-flex ps-5 pt-3 align-items-center'>
+                        <section className='sign d-flex ps-lg-5 pt-3 align-items-center'>
                             <div className='sign-image pe-3'>
                             <img className='w-100' src={Sign} alt=''/>
                             </div>

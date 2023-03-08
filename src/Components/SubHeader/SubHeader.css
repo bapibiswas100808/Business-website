@@ -29,3 +29,25 @@
 .sub-text span{
     color: #ff3e55;
 }
+
+@media (max-width:1199px){
+    .sub-header img{
+        width: 100%;
+        height: calc(100vh - 100px);
+    }
+
+}
+
+@media (max-width:575px){
+.sub-header img{
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.sub-text{
+    top:40% ;
+}
+.sub-text h2{
+    font-size: 20px;
+}
+    
+}

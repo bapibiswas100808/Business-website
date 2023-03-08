@@ -1,4 +1,15 @@
 .blog-area{
-    padding: 80px 0;
+    padding: 50px 0;
     padding-bottom: 50px;
+}
+@media (max-width: 767px){
+    .blog-area{
+        padding: 30px 0;
+    }
+    .blog-text h3{
+        font-size: 20px;
+    }
+    .blog-text p{
+        font-size: 14px;
+    }
 }
