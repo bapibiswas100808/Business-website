@@ -1,13 +1,20 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../../firebase.init';
 import Logo from "../../images/logo.png";
 import "./Header.css";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  }
     return (
       <header className='header-area fixed-top'>
       <Navbar expand="lg">
@@ -20,12 +27,22 @@ const Header = () => {
             style={{ maxHeight: '300px' }}
             navbarScroll
           >
-            <NavLink to="/" className='me-4 nav-link'>Home</NavLink>
-            <NavLink to="/about" className='me-4 nav-link'>About</NavLink>
-            {/* <NavLink to="/" className='me-4 nav-link'>Services</NavLink>
-            <NavLink to="/" className='me-4 nav-link'>Contact</NavLink> */}
-            <NavLink to="/blog" className='me-4 nav-link'>Blog</NavLink>
-            <Button>Get In Touch</Button>
+            <NavLink to="/" className='me-4 nav-link'>
+            <i class="fa-solid fa-house pe-1"></i>
+              Home</NavLink>
+            <NavLink to="/about" className='me-4 nav-link'>
+            <i class="fa-solid fa-lightbulb pe-1"></i>
+              About</NavLink>
+            <NavLink to="/registration" className='me-4 nav-link'>Registration</NavLink>
+            <NavLink to="/blog" className='me-4 nav-link'>
+            <i class="fa-regular fa-envelope-open pe-1"></i>
+              Blog</NavLink>
+              {user?
+              (<Button className='me-4' onClick={handleSignOut}>Sign Out</Button>)
+              : (
+                <NavLink to="/signin" className='me-4 nav-link'>Sign In</NavLink>
+              )
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

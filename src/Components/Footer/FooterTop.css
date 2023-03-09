@@ -8,6 +8,20 @@
 .top-one{
     margin-right: 100px;
 }
+.top-one i{
+    font-size: 30px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-top: 10px;
+}
+.top-one .facebook-icon{
+    background-color: #FF3E55;
+    padding: 3px 10px;
+}
+.top-one .instagram-icon{
+    margin-right: 0;
+}
 .top-two ul{
     padding-left: 0;
 }
@@ -49,6 +63,11 @@
     padding: 5px 10px;
     border-radius: 5px;
     color: #ffffff;
+    transition: 0.3s;
+}
+.footer-top button:hover{
+    background-color: #ffffff;
+    color: #FF3E55;
 }
 
 @media (max-width:991px){

@@ -1,5 +1,4 @@
 .header-area{
-    padding: 5px 0;
     background-color: #0D1E50;
 }
 .header-area .navbar-brand img{
@@ -18,10 +17,15 @@
 .navbar-nav button{
     background-color: #FF3E55;
     border: none;
+    padding: 4px 8px;
+}
+.navbar-nav button:hover{
+    background-color: #ffffff;
+    color: #FF3E55;
 }
 .navbar-toggler-icon{
     border-radius: 5px;
-    background-color: #ff3e55;
+    background-color: #ffffff;
     height: 45px !important;
     width: 45px !important;
 
