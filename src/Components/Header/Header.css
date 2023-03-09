@@ -6,6 +6,9 @@
     width: auto;
     background-color: #ffffff;
 }
+.navbar-nav{
+    align-items: center;
+}
 .navbar-nav a{
     color: #ffffff;
 }.navbar-nav a:hover{
@@ -14,15 +17,21 @@
 .navbar-nav .nav-link.active{
     color: #FF3E55 !important;
 }
-.navbar-nav button{
+.navbar-nav .nav-link:last-child.active{
+    color: #FF3E55 !important;
+    background-color: #ffffff;
+}
+.header-sign{
     background-color: #FF3E55;
     border: none;
-    padding: 4px 8px;
+    padding: 5px 10px !important;
+    border-radius: 5px;
 }
-.navbar-nav button:hover{
+.header-sign:hover{
     background-color: #ffffff;
     color: #FF3E55;
 }
+
 .navbar-toggler-icon{
     border-radius: 5px;
     background-color: #ffffff;

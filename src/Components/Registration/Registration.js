@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import "./Registration.css";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { NavLink } from 'react-router-dom';
 
 const Registration = () => {
     const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Registration = () => {
       error,
     ] = useCreateUserWithEmailAndPassword(auth);
       if (error) {
-        messageDiv.innerHTML = error;
+        messageDiv.innerHTML = "Fill the form correctly!";
       }
       if (loading) {
         messageDiv.innerHTML = "Loading...";
@@ -28,6 +29,7 @@ const Registration = () => {
     return (
         <section className='reg-area'>
         <Container>
+          <div className='reg-in-area'>
           <h2 className='text-center pb-3'>Register Here</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -39,9 +41,12 @@ const Registration = () => {
         <Form.Control type="password" value={password}  onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
       </Form.Group>
       <div id='message-div'></div>
+      <p> <span>Already Have an Account?  </span>
+      <NavLink to="/signin" className='nav-link reg-link'>Login Here</NavLink></p>
       <Button variant="primary" type="submit" button onClick={() => createUserWithEmailAndPassword(email, password)}>
         Submit
       </Button>
+      </div>
             </Container>
         </section>
     );

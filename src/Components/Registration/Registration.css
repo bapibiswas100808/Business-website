@@ -1,3 +1,45 @@
+
 .reg-area{
-    padding: 150px 400px;
+    padding: 100px 250px;
+    margin-top: 60px;
+    /* background-image: url(https://i.ibb.co/R6b0ZNr/service4.jpg); */
+    color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    background-color: blue;
+}
+.reg-area h2{
+    color: #ffffff;
+}
+.reg-area .nav-link.reg-link {
+    display: inline-block;
+    background-color: #ff3e55;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.reg-area .nav-link.reg-link:hover{
+    background-color: #ffffff;
+    color: #ff3e55;
+}
+.reg-area span{
+    margin-right: 10px;
+}
+.reg-area button{
+    background-color: #ff3e55;
+    color: #ffffff;
+    border: none;
+}
+.reg-area button:hover{
+    background-color: #ffffff;
+    color: #ff3e55;
+}
+.reg-area #message-div{
+    margin-bottom: 20px;
+    color: red;
+}
+.reg-in-area{
+    background-color: #0d1e50;
+    padding: 40px 40px;
+    border-radius: 10px;
 }

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Logo from "../../images/logo.png";
 import "./Header.css";
@@ -19,7 +19,7 @@ const Header = () => {
       <header className='header-area fixed-top'>
       <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#"> <img src={Logo} alt=''/></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"> <img src={Logo} alt=''/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -33,14 +33,13 @@ const Header = () => {
             <NavLink to="/about" className='me-4 nav-link'>
             <i class="fa-solid fa-lightbulb pe-1"></i>
               About</NavLink>
-            <NavLink to="/registration" className='me-4 nav-link'>Registration</NavLink>
             <NavLink to="/blog" className='me-4 nav-link'>
             <i class="fa-regular fa-envelope-open pe-1"></i>
               Blog</NavLink>
               {user?
               (<Button className='me-4' onClick={handleSignOut}>Sign Out</Button>)
               : (
-                <NavLink to="/signin" className='me-4 nav-link'>Sign In</NavLink>
+                <NavLink to="/signin" className='me-4 nav-link header-sign'>Sign In</NavLink>
               )
             }
           </Nav>
