@@ -1,11 +1,10 @@
 import React from 'react';
 import Button from 'react-bootstrap/esm/Button';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithFacebook } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
-
-const GoogleSignUp = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+const FacebookSignUp = () => {
+    const [signInWithFacebook, user, loading, error] = useSignInWithFacebook(auth);
     if (error) {
         return (
           <div>
@@ -25,11 +24,12 @@ const GoogleSignUp = () => {
       }
     return (
         <div>
-            <Button className='btn btn-default w-100' onClick={() => signInWithGoogle()} type="submit">
-                Continue With Google
+        <Button className='btn btn-default w-100 mt-3' onClick={() => signInWithFacebook()} type="submit">
+                Continue With Facebook
             </Button>
+            
         </div>
     );
 };
 
-export default GoogleSignUp;
+export default FacebookSignUp;

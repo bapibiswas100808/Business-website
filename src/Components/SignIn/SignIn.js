@@ -45,7 +45,7 @@ const SignIn = () => {
         <Form.Control type="password" value={password}  onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
       </Form.Group>
       <div id='message-div'></div>
-      <p> <span>Not registered yet?  </span>
+      <p>Not registered yet?
       <NavLink to="/registration" className='me-4 nav-link reg-link'>Register Here</NavLink></p>
       <Button variant="primary" type="submit" onClick={() => signInWithEmailAndPassword(email, password)}>
         Sign In

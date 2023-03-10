@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import GoogleSignUp from '../GoogleSignUp/GoogleSignUp';
+import FacebookSignUp from '../FacebookSignUp/FacebookSignUp';
 
 const Registration = () => {
     const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ const Registration = () => {
       user,
       loading,
       error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
       if (error) {
         messageDiv.innerHTML = "Fill the form correctly!";
       }
@@ -46,13 +47,14 @@ const Registration = () => {
         <Form.Control type="password" value={password}  onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
       </Form.Group>
       <div id='message-div'></div>
-      <p> <span>Already Have an Account?  </span>
+      <p>Already Have an Account?
       <NavLink to="/signin" className='nav-link reg-link'>Login Here</NavLink></p>
       <Button variant="primary" type="submit" button onClick={() => createUserWithEmailAndPassword(email, password)}>
         Register
       </Button>
       <span className='or-style'>Or</span>
       <GoogleSignUp/>
+      <FacebookSignUp/>
           </Col>
         </Row>
       </div>

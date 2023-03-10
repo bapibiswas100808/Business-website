@@ -16,10 +16,14 @@
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 5px;
 }
 .reg-area .nav-link.reg-link:hover{
     background-color: #ffffff;
     color: #ff3e55;
+}
+.reg-area p{
+    color: #ffffff;
 }
 .reg-area button{
     background-color: #ff3e55;

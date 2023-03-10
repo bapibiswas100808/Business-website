@@ -9,19 +9,20 @@
 .sign-area h2{
     color: #ffffff;
 }
+.sign-area p{
+    color: #ffffff;
+}
 .sign-area .nav-link.reg-link {
     display: inline-block;
     background-color: #ff3e55;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 5px;
 }
 .nav-link.reg-link:hover{
     background-color: #ffffff;
     color: #ff3e55;
-}
-.sign-area span{
-    margin-right: 10px;
 }
 .sign-area button{
     background-color: #ff3e55;
