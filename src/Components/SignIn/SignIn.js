@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
-import "./SignIn.css"
+import "./SignIn.css";
+import Row from 'react-bootstrap/esm/Row';
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -29,9 +31,11 @@ const SignIn = () => {
     return (
         <section className='sign-area py-lg-5'>
         <Container>
-            <div className='sign-in-area mx-lg-5'>
+            <div className='sign-in-area'>
         <h2 className='text-center pb-3'>Sign In Here</h2>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Row>
+          <Col lg={{span:6, offset:3}}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" value={email}  onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
       </Form.Group>
@@ -46,6 +50,8 @@ const SignIn = () => {
       <Button variant="primary" type="submit" onClick={() => signInWithEmailAndPassword(email, password)}>
         Sign In
       </Button>
+          </Col>
+        </Row>
             </div>
             </Container>
         </section>

@@ -28,13 +28,13 @@ const Header = () => {
             navbarScroll
           >
             <NavLink to="/" className='me-4 nav-link'>
-            <i class="fa-solid fa-house pe-1"></i>
+            <i class="fa-solid fa-house"></i>
               Home</NavLink>
             <NavLink to="/about" className='me-4 nav-link'>
-            <i class="fa-solid fa-lightbulb pe-1"></i>
+            <i class="fa-solid fa-lightbulb"></i>
               About</NavLink>
             <NavLink to="/blog" className='me-4 nav-link'>
-            <i class="fa-regular fa-envelope-open pe-1"></i>
+            <i class="fa-regular fa-envelope-open"></i>
               Blog</NavLink>
               {user?
               (<Button className='me-4' onClick={handleSignOut}>Sign Out</Button>)

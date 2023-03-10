@@ -1,8 +1,7 @@
 
 .reg-area{
-    padding: 100px 250px;
-    margin-top: 60px;
-    /* background-image: url(https://i.ibb.co/R6b0ZNr/service4.jpg); */
+    margin-top: 75px;
+    background-image: url(https://i.ibb.co/wgtZkSc/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background.jpg);
     color: #ffffff;
     background-position: center;
     background-size: cover;
@@ -22,9 +21,6 @@
     background-color: #ffffff;
     color: #ff3e55;
 }
-.reg-area span{
-    margin-right: 10px;
-}
 .reg-area button{
     background-color: #ff3e55;
     color: #ffffff;
@@ -39,7 +35,14 @@
     color: red;
 }
 .reg-in-area{
-    background-color: #0d1e50;
-    padding: 40px 40px;
-    border-radius: 10px;
+    padding: 20px 0;
+}
+.or-style{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: #0d1e35;
+    margin-bottom: 15px;
 }

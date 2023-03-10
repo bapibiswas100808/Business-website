@@ -6,6 +6,9 @@ import "./Registration.css";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { NavLink } from 'react-router-dom';
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
+import GoogleSignUp from '../GoogleSignUp/GoogleSignUp';
 
 const Registration = () => {
     const [email, setEmail] = useState('');
@@ -27,9 +30,11 @@ const Registration = () => {
         messageDiv.innerHTML = "Registration Succesful!";
       }
     return (
-        <section className='reg-area'>
+        <section className='reg-area py-lg-5 px-lg-3'>
         <Container>
           <div className='reg-in-area'>
+        <Row>
+          <Col lg={{span:6, offset:3}}>
           <h2 className='text-center pb-3'>Register Here</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -44,8 +49,12 @@ const Registration = () => {
       <p> <span>Already Have an Account?  </span>
       <NavLink to="/signin" className='nav-link reg-link'>Login Here</NavLink></p>
       <Button variant="primary" type="submit" button onClick={() => createUserWithEmailAndPassword(email, password)}>
-        Submit
+        Register
       </Button>
+      <span className='or-style'>Or</span>
+      <GoogleSignUp/>
+          </Col>
+        </Row>
       </div>
             </Container>
         </section>
