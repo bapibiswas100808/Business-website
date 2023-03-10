@@ -54,4 +54,8 @@
     .navbar-nav button{
         margin-top: 5px;
     }
+    .header-sign{
+        margin-top: 10px;
+        width: 100%;
+    }
 }

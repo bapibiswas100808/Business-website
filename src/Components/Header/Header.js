@@ -28,18 +28,18 @@ const Header = () => {
             navbarScroll
           >
             <NavLink to="/" className='me-4 nav-link'>
-            <i class="fa-solid fa-house"></i>
+            <i className="fa-solid fa-house pe-1"></i>
               Home</NavLink>
             <NavLink to="/about" className='me-4 nav-link'>
-            <i class="fa-solid fa-lightbulb"></i>
+            <i className="fa-solid fa-lightbulb pe-1"></i>
               About</NavLink>
             <NavLink to="/blog" className='me-4 nav-link'>
-            <i class="fa-regular fa-envelope-open"></i>
+            <i className="fa-regular fa-envelope-open pe-1"></i>
               Blog</NavLink>
               {user?
-              (<Button className='me-4' onClick={handleSignOut}>Sign Out</Button>)
+              (<Button onClick={handleSignOut}>Sign Out</Button>)
               : (
-                <NavLink to="/signin" className='me-4 nav-link header-sign'>Sign In</NavLink>
+                <NavLink to="/signin" className=' nav-link header-sign'>Sign In</NavLink>
               )
             }
           </Nav>

@@ -42,4 +42,10 @@
     border-radius: 10px;
 }
 
+@media (max-width:991px){
+    .sign-in-area{
+        padding-top: 50px;
+    }
+}
+
 

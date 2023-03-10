@@ -13,10 +13,10 @@ const FooterTop = () => {
                     <div className='top-one'>
                     <h3>About Us</h3>
                         <p>Essons is the high-rated business Service Provider with well qualified advisors. No specialized qualifications is required to work with us.</p>
-                        <a href='https://www.facebook.com/' target="_blank" rel='noreferrer' className='facebook-icon'><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href='https://www.linkedin.com/' target="_blank" rel='noreferrer'><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href='https://twitter.com/'target="_blank" rel='noreferrer'><i class="fa-brands fa-twitter"></i></a>
-                        <a href='https://www.instagram.com/'target="_blank" rel='noreferrer'><i class="fa-brands fa-instagram"></i></a>
+                        <a href='https://www.facebook.com/' target="_blank" rel='noreferrer'><i className="fa-brands fa-facebook-f facebook-icon"></i></a>
+                        <a href='https://www.linkedin.com/' target="_blank" rel='noreferrer'><i className="fa-brands fa-linkedin-in linkedin-icon"></i></a>
+                        <a href='https://twitter.com/'target="_blank" rel='noreferrer'><i className="fa-brands fa-twitter twitter-icon"></i></a>
+                        <a href='https://www.instagram.com/'target="_blank" rel='noreferrer'><i className="fa-brands fa-instagram instagram-icon"></i></a>
                     </div>
                     </Col>
                     <Col lg={4}>

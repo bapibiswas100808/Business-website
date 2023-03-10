@@ -16,14 +16,28 @@
     padding: 10px 12px;
     border-radius: 5px;
     transition: 0.3s;
-    background-color: #0c88ef;
 }
 .top-one i:hover{
     background-color: #ffffff;
     color: #FF3E55;
     opacity: 0.9;
 }
+.top-one .facebook-icon{
+    background-color: #0c88ef;
+  
+}
+.top-one .linkedin-icon{
+    background-color: #0a66c2;
 
+}
+.top-one .twitter-icon{
+    background-color: #1d9bf0;
+
+}
+.top-one .instagram-icon{
+    margin-right: 0;
+    background-color: #FF3E55;
+}
 .top-two ul{
     padding-left: 0;
 }

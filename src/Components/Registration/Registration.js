@@ -49,7 +49,7 @@ const Registration = () => {
       <div id='message-div'></div>
       <p>Already Have an Account?
       <NavLink to="/signin" className='nav-link reg-link'>Login Here</NavLink></p>
-      <Button variant="primary" type="submit" button onClick={() => createUserWithEmailAndPassword(email, password)}>
+      <Button variant="primary" type="submit" onClick={() => createUserWithEmailAndPassword(email, password)}>
         Register
       </Button>
       <span className='or-style'>Or</span>
