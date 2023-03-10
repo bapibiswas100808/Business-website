@@ -1,0 +1,40 @@
+.contact-area{
+    padding: 50px 0;
+    border-bottom: 1px solid #465991;
+    color: #ffffff;
+    background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2022/05/curves2.png);
+    background-size: cover;
+    background-position: center;
+}
+.contact-subheading {
+    color: #ff3e55;
+    font-size: 18px;
+}
+.contact-area h3{
+    color: #ffffff;
+}
+.contact-image{
+    background-color: #0d1e50;
+    padding: 35px 20px;
+    border-radius: 10px;
+}
+.contact-image img{
+    border-radius: 50%;
+}
+.contact-form{
+    background-color: #ff3e55;
+    /* background: rgb(13,30,80);
+background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(255,62,85,1) 100%); */
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid #e7e4e4;
+}
+.contact-form button{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.contact-form button:hover{
+    background-color: #ffffff;
+    color: #ff3e55;
+    border: 2px solid #ffffff;
+}

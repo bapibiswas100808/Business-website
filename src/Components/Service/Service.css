@@ -1,10 +1,11 @@
 .single-service{
-    border: 1px solid #c4aeae;
     margin-bottom: 30px;
     color: #ffffff;
-    border-radius: 10px;
+    background-color: #0d1e50;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px 20px 10px 10px;
 }
 .single-service::after{
     position: absolute;
@@ -18,13 +19,14 @@
     left: 160px;
     top: 420px;
 }
-.single-service:hover{
-    transform: translateY(-10px);
-    transition: all 0.5s ease-in-out 0s;
-    -webkit-transition: all 0.5s
+.service-image img{
+    transition:  0.3s ease-in-out 0.3s;
+    border-radius: 15px;
+}
+.single-service:hover .service-image img{
+    transform: translateY(-20px);
 }
 .service-text{
-    background-color: #0d1e50;
     min-height: 230px;
     padding: 20px 15px;
 }

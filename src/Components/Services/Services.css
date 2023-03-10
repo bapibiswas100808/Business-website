@@ -1,6 +1,9 @@
 .services-area{
     padding: 50px 0;
     background-color: #f7f7f9;
+    background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2022/05/curves2.png);
+    background-position: center;
+    background-size: cover;
     padding-bottom: 20px;
 }
 .service-subheading{
