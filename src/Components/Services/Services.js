@@ -14,8 +14,10 @@ const Services = () => {
     return (
         <section className='services-area'>
             <Container>
+                <div className='service-main-heading'>
                 <h4 className='text-center service-subheading'>\ services \</h4>
                 <h2 className='text-center mb-5 service-heading'>We Serve the Best Work</h2>
+                </div>
                 <Row>
                 {services.map((item) => (<Service key={item.id} item={item}></Service> ) )}
                 </Row>

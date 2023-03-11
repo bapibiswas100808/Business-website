@@ -2,14 +2,13 @@
     padding: 50px 0;
     background-color: #f7f7f9;
     background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2022/05/curves2.png);
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-repeat: repeat-x 2;
     padding-bottom: 20px;
 }
 .service-subheading{
     color: #ff3e55;
     font-size: 18px;
-
 }
 
 @media (max-width:991px){

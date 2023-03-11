@@ -8,6 +8,7 @@
 .top-one{
     margin-right: 100px;
 }
+
 .top-one a i{
     font-size: 15px;
     margin-right: 20px;
@@ -37,6 +38,9 @@
 .top-one .instagram-icon{
     margin-right: 0;
     background-color: #FF3E55;
+}
+.top-two{
+    margin-left: 30px;
 }
 .top-two ul{
     padding-left: 0;
@@ -84,6 +88,10 @@
 .footer-top button:hover{
     background-color: #ffffff;
     color: #FF3E55;
+}
+.top-three ul li{
+    list-style: none;
+    margin: 5px 0;
 }
 
 @media (max-width:991px){
