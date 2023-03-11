@@ -104,6 +104,9 @@
     .top-three{
         margin-bottom: 30px;
     }
+    .top-two{
+        margin-left: 0;
+    }
 }
 
 @media (max-width:575px){
