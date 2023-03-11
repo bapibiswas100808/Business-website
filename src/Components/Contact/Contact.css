@@ -17,6 +17,9 @@
     background-color: #0d1e50;
     padding: 35px 20px;
     border-radius: 10px;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
 }
 .contact-image img{
     border-radius: 50%;
@@ -28,6 +31,10 @@ background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(25
     padding: 40px 30px;
     border-radius: 10px;
     border: 1px solid #e7e4e4;
+    min-height: 470px;
+}
+.contact-form .text-area{
+    padding-bottom: 100px;
 }
 .contact-form button{
     background-color: transparent;
@@ -37,4 +44,18 @@ background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(25
     background-color: #ffffff;
     color: #ff3e55;
     border: 2px solid #ffffff;
+}
+
+@media (max-width:991px){
+    .contact-image{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:575px){
+    .contact-image{
+        min-height: 300px;
+    }
+    .contact-form{
+        min-height: 300px;
+    }
 }
