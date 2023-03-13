@@ -11,17 +11,15 @@
 }
 .sign-area p{
     color: #ffffff;
+    margin-bottom: 10px;
 }
 .sign-area .nav-link.reg-link {
     display: inline-block;
-    background-color: #ff3e55;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: blue;
+   text-decoration: underline;
     margin: 5px;
 }
 .nav-link.reg-link:hover{
-    background-color: #ffffff;
     color: #ff3e55;
 }
 .sign-area button{
@@ -34,11 +32,17 @@
     color: #ff3e55;
 }
 .sign-area #message-div{
-    margin-bottom: 20px;
     color: red;
+    min-height: 24px;
 }
 .sign-in-area{
-   padding: 20px 0;
+   padding: 30px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.sign-form{
+    background-color: #0d1e50;
+    padding: 20px 25px;
     border-radius: 10px;
 }
 

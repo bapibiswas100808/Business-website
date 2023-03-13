@@ -10,16 +10,19 @@
 .reg-area h2{
     color: #ffffff;
 }
+.registration-form{
+    background-color: #0d1e55;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
 .reg-area .nav-link.reg-link {
     display: inline-block;
-    background-color: #ff3e55;
     color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
     margin: 5px;
+    color: blue;
+    text-decoration: underline;
 }
 .reg-area .nav-link.reg-link:hover{
-    background-color: #ffffff;
     color: #ff3e55;
 }
 .reg-area p{
@@ -35,8 +38,8 @@
     color: #ff3e55;
 }
 .reg-area #message-div{
-    margin-bottom: 20px;
     color: red;
+    min-height: 24px;
 }
 .reg-in-area{
     padding: 20px 0;
@@ -47,9 +50,11 @@
     margin-top: 15px;
     padding: 5px 0;
     border-radius: 5px;
-    background-color: #0d1e35;
+    background-color: #ffffff;
     margin-bottom: 15px;
+    color: #ff3e55;
 }
+
 
 @media (max-width:991px){
     .reg-in-area{

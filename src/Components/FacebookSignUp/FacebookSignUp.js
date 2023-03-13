@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/esm/Button';
 import { useSignInWithFacebook } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import "./FacebookSignUp.css"
 
 const FacebookSignUp = () => {
     const [signInWithFacebook, user, loading, error] = useSignInWithFacebook(auth);
@@ -24,7 +25,7 @@ const FacebookSignUp = () => {
       }
     return (
         <div>
-        <Button className='btn btn-default w-100 mt-3' onClick={() => signInWithFacebook()} type="submit">
+        <Button className='btn w-100 mt-3 facebook-button' onClick={() => signInWithFacebook()} type="submit">
                 Continue With Facebook
             </Button>
             

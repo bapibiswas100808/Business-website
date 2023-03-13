@@ -36,25 +36,27 @@ const Registration = () => {
           <div className='reg-in-area'>
         <Row>
           <Col lg={{span:6, offset:3}}>
+          <div className='registration-form'>
           <h2 className='text-center pb-3'>Register Here</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" value={email}  onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-2" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" value={password}  onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
       </Form.Group>
       <div id='message-div'></div>
       <p>Already Have an Account?
       <NavLink to="/signin" className='nav-link reg-link'>Login Here</NavLink></p>
-      <Button variant="primary" type="submit" onClick={() => createUserWithEmailAndPassword(email, password)}>
+      <Button className='submit-button' variant="primary" type="submit" onClick={() => createUserWithEmailAndPassword(email, password)}>
         Register
       </Button>
       <span className='or-style'>Or</span>
       <GoogleSignUp/>
       <FacebookSignUp/>
+          </div>
           </Col>
         </Row>
       </div>

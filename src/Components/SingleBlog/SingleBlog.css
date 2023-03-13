@@ -6,7 +6,7 @@
     position: relative;
     overflow: hidden;
 }
-.single-blog::after{
+/* .single-blog::after{
     position: absolute;
     content: "";
     height: 400px;
@@ -17,7 +17,7 @@
     border-radius: 50%;
     left: 72%;
     top: 84%;
-}
+} */
 .blog-text{
     background-color: #0d1e50;
     min-height: 230px;
@@ -31,7 +31,7 @@
     color: #ffffff;
     position: relative;
 }
-.blog-text h3::before{
+/* .blog-text h3::before{
     content: "";
     width: 50%;
     height: 2px;
@@ -50,7 +50,7 @@
     position: absolute;
     z-index: 1;
     background-color: #FF3E55;
-}
+} */
 .single-blog .blog-text p{
     margin-bottom: 0;
     padding-bottom: 15px;

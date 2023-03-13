@@ -1,5 +1,5 @@
 import React from 'react';
-import SubImage from "../../images/shape.jpg"
+import SubImage from "../../images/bbbb.avif"
 import "./SubHeader.css"
 
 const SubHeader = () => {

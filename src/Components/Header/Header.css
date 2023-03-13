@@ -3,8 +3,8 @@
 }
 .header-area .navbar-brand img{
     height: 50px;
-    width: auto;
-    background-color: #ffffff;
+    width: 100%;
+   
 }
 .navbar-nav{
     align-items: center;

@@ -11,7 +11,7 @@
 .single-service:hover{
     background-color: #9f2836;
 }
-.single-service::after{
+/* .single-service::after{
     position: absolute;
     content: "";
     height: 400px;
@@ -27,7 +27,7 @@
 .single-service:hover::after{
     background: rgb(13,30,80);
     background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 100%, rgba(255,62,85,1) 100%);
-}
+} */
 .service-image img{
     transition:  0.3s ease-in-out 0.3s;
     border-radius: 15px;

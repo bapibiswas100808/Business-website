@@ -4,7 +4,8 @@
 }
 
 .carousel-item img{
-    max-height: calc(100vh - 90px);
+    max-height: calc(100vh - 76px);
+    opacity: 0.85;
 }
 
 .carousel-control-prev-icon{
@@ -29,15 +30,15 @@
 }
 .carousel-caption h5{
     color: #FF3E55;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .carousel-caption h3{
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 50px;
     color: #ffffff;
-    background: rgb(13,30,80);
-background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(255,62,85,1) 100%);
+    /* background: rgb(13,30,80);
+background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(255,62,85,1) 100%); */
 }
 .carousel-caption p{
     font-size: 30px;
