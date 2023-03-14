@@ -2,8 +2,8 @@
     background-color: #0D1E50;
 }
 .header-area .navbar-brand img{
-    height: 50px;
-    width: 100%;
+    height: auto;
+    width: 100px;
 }
 .navbar-nav{
     align-items: center;
