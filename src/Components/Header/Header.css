@@ -43,6 +43,7 @@
     box-shadow: none !important;
 }
 
+
 @media (max-width:991px){
     .header-area .navbar-brand img{
         height: 50px;
