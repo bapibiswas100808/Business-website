@@ -45,6 +45,10 @@
 .navbar-toggler:focus{
     box-shadow: none !important;
 }
+.sign-out-button{
+    background-color: #FF3E55 !important;
+    border: none !important;
+}
 
 
 @media (max-width:991px){

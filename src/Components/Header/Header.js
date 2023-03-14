@@ -37,7 +37,7 @@ const Header = () => {
             <i className="fa-regular fa-envelope-open pe-1"></i>
               Blog</NavLink>
               {user?
-              (<Button onClick={handleSignOut}>Sign Out</Button>)
+              (<Button className='sign-out-button' onClick={handleSignOut}>Sign Out</Button>)
               : (
                 <NavLink to="/signin" className=' nav-link header-sign'>Sign In</NavLink>
               )
