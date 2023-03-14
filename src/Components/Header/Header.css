@@ -9,10 +9,13 @@
 .navbar-nav{
     align-items: center;
 }
+.header-area .nav-link{
+    color: #ffffff !important;
+}
 .navbar-nav a{
     color: #ffffff;
 }.navbar-nav a:hover{
-    color: #FF3E55;
+    color: #FF3E55 !important;
 }
 .navbar-nav .nav-link.active{
     color: #FF3E55 !important;
