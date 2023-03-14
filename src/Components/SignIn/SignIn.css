@@ -38,7 +38,6 @@
 .sign-in-area{
    padding: 30px 0;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 .sign-form{
     background-color: #0d1e50;
@@ -48,7 +47,7 @@
 
 @media (max-width:991px){
     .sign-in-area{
-        padding-top: 50px;
+      padding: 60px 0;
     }
 }
 

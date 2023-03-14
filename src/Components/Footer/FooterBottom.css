@@ -10,15 +10,14 @@
 .footer-logo img{
     height: 50px;
     width: auto;
-    background-color:#ffffff;
 }
 .footer-logo::before{
     position: absolute;
     content: "";
-    height: 75px;
+    height: 85px;
     width: 100px;
     clip-path: polygon(145% 0, 100% 100%, 0 100%);
-    top: -75px;
+    top: -78px;
     background-color: #FF3E55;
     
 }

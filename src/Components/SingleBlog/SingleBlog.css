@@ -54,4 +54,14 @@
 .single-blog .blog-text p{
     margin-bottom: 0;
     padding-bottom: 15px;
+    font-size: 15px;
+}
+
+@media (max-width:1399px){
+    .blog-text h3{
+        font-size: 25px;
+    }
+    .blog-text p{
+        font-size: 14px !important;
+    }
 }

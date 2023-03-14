@@ -95,6 +95,9 @@
 }
 
 @media (max-width:991px){
+    /* .footer-top{
+        text-align: center;
+    } */
     .top-one{
         margin-bottom: 30px;
     }
@@ -107,9 +110,9 @@
     .top-two{
         margin-left: 0;
     }
-}
+/* }
 
-@media (max-width:575px){
+@media (max-width:575px){ */
     .footer-top{
         text-align: center;
     }
@@ -118,9 +121,10 @@
     }
     .footer-top h3::before{
         left: 50%;
+        width: 35%;
         transform: translateX(-50%);
     }
     .footer-top h3::after{
-        left: 20% !important;
+        left: 32% !important;
     }
 }

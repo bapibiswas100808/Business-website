@@ -22,7 +22,7 @@ const Contact = () => {
                 </Col>
                 <Col lg={6}>
                     <div className='contact-form'>
-                    <h3 className='mb-4'>Get In Touch</h3>
+                    <h3 className='mb-4'>Do You Want To Get In Touch?</h3>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
