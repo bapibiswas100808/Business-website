@@ -41,6 +41,7 @@
 @media (max-width:575px){
 .sub-header img{
     height: 300px;
+    width: 100%;
 }
 .sub-text{
     top:40% ;
