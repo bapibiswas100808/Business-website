@@ -1,24 +1,23 @@
-import React from 'react';
-import Container from 'react-bootstrap/esm/Container';
-import SubHeader from '../../SubHeader/SubHeader';
-import "./Error.css"
+import React from "react";
+import Container from "react-bootstrap/esm/Container";
+import "./Error.css";
 
 const Error = () => {
-    return (
-        <section>
-            <SubHeader/>
-            <Container>
-            <div className='error-text'>
-            <h3 className='text-center'>404 <br/>
-                Page Not Found
+  return (
+    <section>
+      <div className="error-area">
+        <Container>
+          <div className="error-text">
+            <h3 className="text-center">
+              404 <br />
+              Page Not Found
             </h3>
-            <a href='/'> Back to Home</a>
-                </div>            
-
-            </Container>
-            
-        </section>
-    );
+            <a href="/"> Back to Home</a>
+          </div>
+        </Container>
+      </div>
+    </section>
+  );
 };
 
 export default Error;
