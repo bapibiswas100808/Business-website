@@ -61,6 +61,25 @@
   font-size: 15px;
 }
 
+.single-blog .service-button {
+  border: none;
+  background-color: #ff3e55;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+.single-blog .service-button:hover {
+  background-color: #ffffff;
+  color: #ff3e55;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 62, 85, 0.3);
+}
+
 @media (max-width: 1399px) {
   .blog-text h3 {
     font-size: 25px;

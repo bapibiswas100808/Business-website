@@ -1,16 +1,20 @@
-.single-service{
-    margin-bottom: 30px;
-    color: #ffffff;
-    background-color: #0d1e50;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 20px 20px 10px 10px;
-    transition: 0.8s ease-out ;
+.single-service {
+  margin-bottom: 30px;
+  color: #ffffff;
+  background-color: #0d1e50;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px 20px 10px 10px;
+  transition: 0.8s ease-out;
 }
-.single-service:hover{
-    background: rgb(13,30,80);
-    background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 0%, rgba(255,62,85,1) 100%); 
+.single-service:hover {
+  background: rgb(13, 30, 80);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 30, 80, 0.9249824929971989) 0%,
+    rgba(255, 62, 85, 1) 100%
+  );
 }
 /* .single-service::after{
     position: absolute;
@@ -29,84 +33,90 @@
     background: rgb(13,30,80);
     background: linear-gradient(90deg, rgba(13,30,80,0.9249824929971989) 100%, rgba(255,62,85,1) 100%);
 } */
-.service-image img{
-    transition:  0.3s ease-in-out 0.2s;
-    border-radius: 15px;
-    border: 1px solid #0d1e50;
+.service-image img {
+  transition: 0.3s ease-in-out 0.2s;
+  border-radius: 15px;
+  border: 1px solid #0d1e50;
 }
-.single-service:hover .service-image img{
-    transform: translateY(-20px);
+.single-service:hover .service-image img {
+  transform: translateY(-20px);
 }
-.service-text{
-    min-height: 230px;
-    padding: 20px 15px;
+.service-text {
+  min-height: 230px;
+  padding: 20px 15px;
 }
-.single-service h3{
-    font-size: 18px;
-    position: relative;
-    margin-bottom: 25px;
-    color: #ffffff;
+.single-service h3 {
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 25px;
+  color: #ffffff;
 }
-.single-service .service-text p{
-    margin-bottom: 0;
-    color: #ffffff !important;
-}
-
-.single-service h3::before{
-    content: "";
-    width: 50%;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background: #0b2f6e71;
-}
-.single-service h3::after{
-    content: "";
-    width: 40px;
-    height: 2px;
-    left: 0 !important;
-    bottom: -10px;
-    left: inherit;
-    position: absolute;
-    z-index: 1;
-    background-color: #FF3E55;
-}
-.service-button{
-    border: none;
-    background-color: #FF3E55;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: #ffffff;
-    transition: 0.3s;
-}
-.service-button:hover{
-    background-color: #ffffff;
-    color: #FF3E55;
+.single-service .service-text p {
+  margin-bottom: 0;
+  color: #ffffff !important;
 }
 
-@media (max-width:1199px){
-    .service-text h3{
-        font-size: 16px;
-    }
-    .service-text p{
-        font-size: 13px;
-    }
-    .single-service::after{
-        top: 350px;
-    }
+.single-service h3::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #0b2f6e71;
+}
+.single-service h3::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  left: 0 !important;
+  bottom: -10px;
+  left: inherit;
+  position: absolute;
+  z-index: 1;
+  background-color: #ff3e55;
+}
+.service-button {
+  border: none;
+  background-color: #ff3e55;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+.service-button:hover {
+  background-color: #ffffff;
+  color: #ff3e55;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 62, 85, 0.3);
 }
 
-@media (max-width:991px){
-    .single-service::after{
-        top: 600px;
-        left: 500px;
-    }
+@media (max-width: 1199px) {
+  .service-text h3 {
+    font-size: 16px;
+  }
+  .service-text p {
+    font-size: 13px;
+  }
+  .single-service::after {
+    top: 350px;
+  }
 }
 
-@media (max-width:575px){
-    .single-service::after{
-        left: 160px;
-        top: 410px;
-    }
+@media (max-width: 991px) {
+  .single-service::after {
+    top: 600px;
+    left: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  .single-service::after {
+    left: 160px;
+    top: 410px;
+  }
 }
