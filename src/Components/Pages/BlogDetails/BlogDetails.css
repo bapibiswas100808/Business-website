@@ -33,7 +33,7 @@
 }
 
 .back-link {
-  color: #6c757d;
+  color: #6c757d !important;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;

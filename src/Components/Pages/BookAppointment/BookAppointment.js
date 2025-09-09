@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "./BookAppointment.css";
+import { sendEmail, initEmailJS } from "../../../utils/emailService";
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -26,6 +27,12 @@ const BookAppointment = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize EmailJS when component mounts
+  useEffect(() => {
+    initEmailJS();
+  }, []);
 
   const services = [
     "Business Consulting",
@@ -56,8 +63,9 @@ const BookAppointment = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     // Basic validation
     if (
@@ -71,6 +79,7 @@ const BookAppointment = () => {
       setAlertType("danger");
       setAlertMessage("Please fill in all required fields.");
       setShowAlert(true);
+      setIsSubmitting(false);
       return;
     }
 
@@ -80,33 +89,63 @@ const BookAppointment = () => {
       setAlertType("danger");
       setAlertMessage("Please enter a valid email address.");
       setShowAlert(true);
+      setIsSubmitting(false);
       return;
     }
 
-    // Here you would typically send the data to your backend
-    console.log("Appointment Data:", {
-      ...formData,
-      appointmentDate: selectedDate.toDateString(),
-    });
+    try {
+      // Prepare appointment data for email
+      const appointmentData = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        message: `
+Appointment Request:
 
-    setAlertType("success");
-    setAlertMessage(
-      "Your appointment request has been submitted successfully! We will contact you within 24 hours to confirm."
-    );
-    setShowAlert(true);
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Company: ${formData.company || "Not provided"}
+Service: ${formData.service}
+Date: ${selectedDate.toDateString()}
+Time: ${formData.preferredTime}
 
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: "",
-      preferredTime: "",
-    });
-    setSelectedDate(new Date());
+Additional Message:
+${formData.message || "No additional message"}
+        `,
+        subject: "Appointment Request - " + formData.service,
+      };
+
+      // Send email using EmailJS
+      await sendEmail(appointmentData);
+
+      setAlertType("success");
+      setAlertMessage(
+        "Your appointment request has been submitted successfully! We will contact you within 24 hours to confirm."
+      );
+      setShowAlert(true);
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
+        preferredTime: "",
+      });
+      setSelectedDate(new Date());
+    } catch (error) {
+      setAlertType("danger");
+      setAlertMessage(
+        "Sorry, there was an error submitting your appointment request. Please try again."
+      );
+      setShowAlert(true);
+    } finally {
+      setIsSubmitting(false);
+    }
 
     // Hide alert after 5 seconds
     setTimeout(() => {
@@ -142,8 +181,7 @@ const BookAppointment = () => {
               <Alert
                 variant={alertType}
                 dismissible
-                onClose={() => setShowAlert(false)}
-              >
+                onClose={() => setShowAlert(false)}>
                 {alertMessage}
               </Alert>
             )}
@@ -234,8 +272,7 @@ const BookAppointment = () => {
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
-                          required
-                        >
+                          required>
                           <option value="">Select a service</option>
                           {services.map((service, index) => (
                             <option key={index} value={service}>
@@ -270,8 +307,7 @@ const BookAppointment = () => {
                               name="preferredTime"
                               value={formData.preferredTime}
                               onChange={handleInputChange}
-                              required
-                            >
+                              required>
                               <option value="">Select a time</option>
                               {timeSlots.map((time, index) => (
                                 <option key={index} value={time}>
@@ -298,11 +334,13 @@ const BookAppointment = () => {
                       <div className="form-submit-section text-center">
                         <Button
                           type="submit"
-                          className="appointment-submit-btn"
+                          className="book-appointment-button"
                           size="lg"
-                        >
+                          disabled={isSubmitting}>
                           <i className="fa-solid fa-paper-plane me-2"></i>
-                          Submit Appointment Request
+                          {isSubmitting
+                            ? "Submitting..."
+                            : "Submit Appointment Request"}
                         </Button>
                       </div>
                     </Form>
@@ -354,10 +392,6 @@ const BookAppointment = () => {
                         feel free to contact us:
                       </p>
                       <div className="contact-details">
-                        <p>
-                          <i className="fa-solid fa-phone me-2"></i>
-                          <strong>Phone:</strong> +1 (555) 123-4567
-                        </p>
                         <p>
                           <i className="fa-solid fa-envelope me-2"></i>
                           <strong>Email:</strong> appointments@business.com

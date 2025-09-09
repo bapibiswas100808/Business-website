@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "./ServiceDetails.css";
+import { getImageUrl } from "../../../utils/getImage";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -9,12 +10,13 @@ const ServiceDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/Service.json")
+    fetch(`http://localhost:1337/api/services/${id}?populate=*`)
       .then((res) => res.json())
       .then((data) => {
-        const foundService = data.find((service) => service.id === id);
-        setService(foundService);
+        // const foundService = data.find((service) => service.id === id);
+        setService(data.data);
         setLoading(false);
+        // console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching service:", error);
@@ -62,10 +64,15 @@ const ServiceDetails = () => {
               </div>
 
               <div className="service-image-container">
-                <img
+                {/* <img
                   src={service.image}
                   alt={service.heading}
                   className="service-details-image"
+                /> */}
+                <img
+                  src={getImageUrl(service.image)}
+                  alt=""
+                  className="blog-details-image"
                 />
                 <div className="service-overlay">
                   <div className="service-badge">
@@ -147,16 +154,14 @@ const ServiceDetails = () => {
                         Contact us today to discuss how we can help with your{" "}
                         {service.heading.toLowerCase()} needs.
                       </p>
-                      <div className="cta-buttons">
-                        <Button variant="primary" size="lg" className="me-3">
-                          <i className="fa-solid fa-calendar me-2"></i>
-                          Book Appointment
-                        </Button>
-                        <Button variant="outline-primary" size="lg">
-                          <i className="fa-solid fa-phone me-2"></i>
-                          Call Now
-                        </Button>
-                      </div>
+                      <Button
+                        as={Link}
+                        to="/book-appointment"
+                        className="book-appointment-button"
+                        variant="primary">
+                        <i className="fa-solid fa-calendar-check pe-1"></i>
+                        Book Appointment
+                      </Button>
                     </Card.Body>
                   </Card>
                 </div>
@@ -165,7 +170,7 @@ const ServiceDetails = () => {
           </Col>
         </Row>
 
-        <Row className="mt-5">
+        {/* <Row className="mt-5">
           <Col>
             <div className="related-services">
               <h3>Explore Our Other Services</h3>
@@ -185,7 +190,7 @@ const ServiceDetails = () => {
               </div>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );
