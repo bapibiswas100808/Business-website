@@ -11,7 +11,6 @@ const Slider = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderData(data.data);
-        console.log(data.data);
       })
       .catch((err) => {
         console.error("Error fetching slider data:", err);
