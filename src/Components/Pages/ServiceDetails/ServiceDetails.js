@@ -78,7 +78,7 @@ const ServiceDetails = () => {
                 />
                 <div className="service-overlay">
                   <div className="service-badge">
-                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star me-1"></i>
                     Premium Service
                   </div>
                 </div>
