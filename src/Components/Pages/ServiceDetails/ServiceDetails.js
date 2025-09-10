@@ -10,7 +10,9 @@ const ServiceDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/services/${id}?populate=*`)
+    fetch(
+      `https://business-website-strapi.onrender.com/api/services/${id}?populate=*`
+    )
       .then((res) => res.json())
       .then((data) => {
         // const foundService = data.find((service) => service.id === id);

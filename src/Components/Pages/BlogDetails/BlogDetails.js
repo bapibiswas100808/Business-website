@@ -10,7 +10,9 @@ const BlogDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/blogs/${id}?populate=*`)
+    fetch(
+      `https://business-website-strapi.onrender.com/api/blogs/${id}?populate=*`
+    )
       .then((res) => res.json())
       .then((data) => {
         setBlog(data.data);

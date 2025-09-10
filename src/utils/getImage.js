@@ -16,7 +16,9 @@ export function getImageUrl(image, size = "medium") {
     }
 
     // Otherwise, prepend the Strapi base URL
-    const baseUrl = process.env.REACT_APP_STRAPI_URL || "http://localhost:1337";
+    const baseUrl =
+      process.env.REACT_APP_STRAPI_URL ||
+      "https://business-website-strapi.onrender.com";
     return `${baseUrl}${url}`;
   };
 

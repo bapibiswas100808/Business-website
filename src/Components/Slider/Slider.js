@@ -7,7 +7,7 @@ const Slider = () => {
   const [sliderData, setSliderData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/sliders?populate=*`)
+    fetch(`https://business-website-strapi.onrender.com/api/sliders?populate=*`)
       .then((res) => res.json())
       .then((data) => {
         setSliderData(data.data);

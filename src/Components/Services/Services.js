@@ -9,7 +9,9 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/services?populate=*`)
+    fetch(
+      `https://business-website-strapi.onrender.com/api/services?populate=*`
+    )
       .then((res) => res.json())
       .then((data) => {
         setServices(data.data);

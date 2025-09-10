@@ -12,7 +12,7 @@ const Header = () => {
   const [logoUrl, setLogoUrl] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/header?populate=*`)
+    fetch(`https://business-website-strapi.onrender.com/api/header?populate=*`)
       .then((response) => response.json())
       .then((data) => {
         setLogoUrl(data.data.logo);
