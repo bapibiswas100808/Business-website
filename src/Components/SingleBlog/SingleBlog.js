@@ -1,23 +1,29 @@
-import React from 'react';
-import Col from 'react-bootstrap/esm/Col';
-import "./SingleBlog.css"
+import React from "react";
+import Col from "react-bootstrap/esm/Col";
+import { Link } from "react-router-dom";
+import "./SingleBlog.css";
+import { getImageUrl } from "../../utils/getImage";
 
-const SingleBlog = ({item}) => {
-    return (
-        <Col lg={6}>
-            <div className='single-blog'>
-            <div className='blog-image'>
-            <img src={item.image} alt=''className='w-100'/>
-            </div>
-            <div className='blog-text'>
-            <h3>{item.heading}</h3>
-            <p>{item.text}</p> 
-            <button className='service-button mt-3'>Learn More</button>  
-            </div>
-            </div>
-        </Col>
-
-    );
+const SingleBlog = ({ item }) => {
+  return (
+    <Col lg={6}>
+      <div className="single-blog">
+        <img
+          src={getImageUrl(item.image)}
+          alt=""
+          className="service-details-image"
+        />
+        <div className="blog-text">
+          <h3>{item.heading}</h3>
+          <p>{item.text}</p>
+          <Link to={`/blog/${item.documentId}`} className="service-button mt-3">
+            Learn More
+            <i className="fa-solid fa-arrow-right ms-2"></i>
+          </Link>
+        </div>
+      </div>
+    </Col>
+  );
 };
 
 export default SingleBlog;

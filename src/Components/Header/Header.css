@@ -1,68 +1,96 @@
-.header-area{
-    background-color: #0D1E50;
+.header-area {
+  background-color: #0d1e50;
 }
-.header-area .navbar-brand img{
-    height: auto;
-    width: 100px;
+.header-area .navbar-brand img {
+  height: auto;
+  width: 100px;
 }
-.navbar-nav{
-    align-items: center;
+.navbar-nav {
+  align-items: center;
 }
-.header-area .nav-link{
-    color: #ffffff !important;
+.header-area .nav-link {
+  color: #ffffff !important;
 }
-.navbar-nav a{
-    color: #ffffff;
-}.navbar-nav a:hover{
-    color: #FF3E55 !important;
+.navbar-nav a {
+  color: #ffffff;
 }
-.navbar-nav .nav-link.active{
-    color: #FF3E55 !important;
+.navbar-nav a:hover {
+  color: #ff3e55 !important;
 }
-.navbar-nav .nav-link:last-child.active{
-    color: #FF3E55 !important;
-    background-color: #ffffff;
+.navbar-nav .nav-link.active {
+  color: #ff3e55 !important;
 }
-.header-sign{
-    background-color: #FF3E55;
-    border: none;
+.navbar-nav .nav-link:last-child.active {
+  color: #ff3e55 !important;
+  background-color: #ffffff;
+}
+.header-sign {
+  background-color: #ff3e55;
+  border: none;
+  padding: 5px 10px !important;
+  border-radius: 5px;
+}
+.header-sign:hover {
+  background-color: #ffffff;
+  color: #ff3e55;
+}
+
+.book-appointment-button {
+  background-color: #ff3e55 !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 10px rgba(255, 62, 85, 0.3) !important;
+}
+
+.book-appointment-button:hover {
+  background-color: #ffffff !important;
+  color: #ff3e55 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(255, 62, 85, 0.4) !important;
+}
+
+.book-appointment-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 62, 85, 0.25) !important;
+}
+
+.navbar-toggler-icon {
+  border-radius: 5px;
+  background-color: #ffffff;
+  height: 45px !important;
+  width: 45px !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.sign-out-button {
+  background-color: #ff3e55 !important;
+  border: none !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+    margin-right: 0 !important;
+  }
+  .header-sign {
+    margin-top: 5px;
+    width: 100%;
+  }
+  .sign-out-button {
     padding: 5px 10px !important;
-    border-radius: 5px;
-}
-.header-sign:hover{
-    background-color: #ffffff;
-    color: #FF3E55;
-}
-
-.navbar-toggler-icon{
-    border-radius: 5px;
-    background-color: #ffffff;
-    height: 45px !important;
-    width: 45px !important;
-
-}
-.navbar-toggler:focus{
-    box-shadow: none !important;
-}
-.sign-out-button{
-    background-color: #FF3E55 !important;
-    border: none !important;
-}
-
-
-@media (max-width:991px){
-    .navbar-nav .nav-link{
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    .header-sign{
-        margin-top: 5px;
-        width: 100%;
-    }
-    .sign-out-button{
-        padding: 5px 10px !important;
-        margin-top: 5px;
-        width: 100%;
-    }
-
+    margin-top: 5px;
+    width: 100%;
+  }
+  .book-appointment-button {
+    margin-top: 10px !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
 }
