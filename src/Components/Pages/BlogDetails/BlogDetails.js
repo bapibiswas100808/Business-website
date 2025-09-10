@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./BlogDetails.css";
+import { getImageUrl } from "../../../utils/getImage";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -9,18 +10,18 @@ const BlogDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/Blog.json")
+    fetch(
+      `https://business-website-strapi.onrender.com/api/blogs/${id}?populate=*`
+    )
       .then((res) => res.json())
       .then((data) => {
-        const foundBlog = data.find((blog) => blog.id === id);
-        setBlog(foundBlog);
+        setBlog(data.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Error fetching blog:", error);
-        setLoading(false);
+      .catch((err) => {
+        console.error("Error fetching blogs:", err);
       });
-  }, [id]);
+  }, []);
 
   if (loading) {
     return (
@@ -31,12 +32,13 @@ const BlogDetails = () => {
       </div>
     );
   }
-
   if (!blog) {
     return (
-      <Container className="not-found-container">
-        <Row className="justify-content-center">
-          <Col md={6} className="text-center">
+      <Container
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh" }}>
+        <Row>
+          <Col md={12} className="text-center">
             <h2>Blog Post Not Found</h2>
             <p>The blog post you're looking for doesn't exist.</p>
             <Link to="/blog" className="btn btn-primary">
@@ -61,13 +63,11 @@ const BlogDetails = () => {
                 </Link>
               </div>
 
-              <div className="blog-image-container">
-                <img
-                  src={blog.image}
-                  alt={blog.heading}
-                  className="blog-details-image"
-                />
-              </div>
+              <img
+                src={getImageUrl(blog.image)}
+                alt=""
+                className="blog-details-image"
+              />
 
               <div className="blog-content">
                 <h1 className="blog-title">{blog.heading}</h1>
@@ -117,7 +117,7 @@ const BlogDetails = () => {
           </Col>
         </Row>
 
-        <Row className="mt-5">
+        {/* <Row className="mt-5">
           <Col>
             <div className="related-articles">
               <h3>Related Articles</h3>
@@ -133,7 +133,7 @@ const BlogDetails = () => {
               </div>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );
