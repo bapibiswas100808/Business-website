@@ -2,9 +2,9 @@ import emailjs from "@emailjs/browser";
 
 // EmailJS configuration
 const EMAILJS_CONFIG = {
-  SERVICE_ID: "service_yrskowl", // Gmail, Outlook etc.
-  TEMPLATE_ID: "template_2g8fq0j", // Template you create in EmailJS
-  PUBLIC_KEY: "3xd1VyeW9RbKVVGor", // Your EmailJS public key
+  SERVICE_ID: "service_akirlru", // Gmail, Outlook etc.
+  TEMPLATE_ID: "template_p171q85", // Template you create in EmailJS
+  PUBLIC_KEY: "CQK8hIb1Dt8viUSHV", // Your EmailJS public key
 };
 
 /**
@@ -26,7 +26,7 @@ export const sendEmail = async (formData) => {
       message: formData.message,
       phone: formData.phone || "Not provided",
       subject: formData.subject || "Contact Form Submission",
-      to_email: "shuvankor001@gmail.com", // Your email where you want to receive messages
+      to_email: "digitalmix.agency247@gmail.com", // Your email where you want to receive messages
       reply_to: formData.email,
     };
 

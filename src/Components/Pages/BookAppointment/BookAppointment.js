@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Card,
-  Alert,
-} from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "./BookAppointment.css";
 import { sendEmail, initEmailJS } from "../../../utils/emailService";
+import { toast } from "react-toastify";
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -24,9 +17,6 @@ const BookAppointment = () => {
     preferredTime: "",
   });
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("success");
-  const [alertMessage, setAlertMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Initialize EmailJS when component mounts
@@ -76,9 +66,14 @@ const BookAppointment = () => {
       !formData.service ||
       !formData.preferredTime
     ) {
-      setAlertType("danger");
-      setAlertMessage("Please fill in all required fields.");
-      setShowAlert(true);
+      toast.error("Please fill in all required fields.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       setIsSubmitting(false);
       return;
     }
@@ -86,9 +81,14 @@ const BookAppointment = () => {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setAlertType("danger");
-      setAlertMessage("Please enter a valid email address.");
-      setShowAlert(true);
+      toast.error("Please enter a valid email address.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       setIsSubmitting(false);
       return;
     }
@@ -119,11 +119,17 @@ ${formData.message || "No additional message"}
       // Send email using EmailJS
       await sendEmail(appointmentData);
 
-      setAlertType("success");
-      setAlertMessage(
-        "Your appointment request has been submitted successfully! We will contact you within 24 hours to confirm."
+      toast.success(
+        "Your appointment request has been submitted successfully!",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
       );
-      setShowAlert(true);
 
       // Reset form
       setFormData({
@@ -138,19 +144,20 @@ ${formData.message || "No additional message"}
       });
       setSelectedDate(new Date());
     } catch (error) {
-      setAlertType("danger");
-      setAlertMessage(
-        "Sorry, there was an error submitting your appointment request. Please try again."
+      toast.error(
+        "Sorry, there was an error submitting your appointment request. Please try again.",
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
       );
-      setShowAlert(true);
     } finally {
       setIsSubmitting(false);
     }
-
-    // Hide alert after 5 seconds
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
   };
 
   // Filter out past dates
@@ -176,15 +183,6 @@ ${formData.message || "No additional message"}
                 business needs
               </p>
             </div>
-
-            {showAlert && (
-              <Alert
-                variant={alertType}
-                dismissible
-                onClose={() => setShowAlert(false)}>
-                {alertMessage}
-              </Alert>
-            )}
 
             <Row>
               <Col lg={8}>

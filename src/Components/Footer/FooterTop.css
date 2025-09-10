@@ -1,130 +1,127 @@
-.footer-top{
-    padding: 50px 0;
-    background-color: #0d1e50;
-    color: #ffffff;
-    background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2021/08/footer-bg-1.png);
-    background-size: cover;
+.footer-top {
+  padding: 50px 0;
+  background-color: #0d1e50;
+  color: #ffffff;
+  background-image: url(https://elementor.zozothemes.com/corpkit/wp-content/uploads/sites/45/2021/08/footer-bg-1.png);
+  background-size: cover;
 }
-.top-one{
-    margin-right: 100px;
-}
-
-.top-one a i{
-    font-size: 15px;
-    margin-right: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 10px 12px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.top-one i:hover{
-    background-color: #ffffff;
-    color: #FF3E55;
-    opacity: 0.9;
-}
-.top-one .facebook-icon{
-    background-color: #0c88ef;
-  
-}
-.top-one .linkedin-icon{
-    background-color: #0a66c2;
-
-}
-.top-one .twitter-icon{
-    background-color: #1d9bf0;
-
-}
-.top-one .instagram-icon{
-    margin-right: 0;
-    background-color: #FF3E55;
-}
-.top-two{
-    margin-left: 30px;
-}
-.top-two ul{
-    padding-left: 0;
-}
-.top-two ul li{
-    margin-bottom: 10px;
-    list-style: none;
-}
-.footer-top h3{
-    position: relative;
-    padding-bottom: 20px;
-    color: #ffffff;
-}
-.footer-top h3::before{
-    content: "";
-    width: 50%;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #0b2f6e71;
-}
-.footer-top h3::after{
-    content: "";
-    width: 40px;
-    height: 2px;
-    left: 0 !important;
-    bottom: 0;
-    left: inherit;
-    position: absolute;
-    z-index: 1;
-    background-color: #FF3E55;
-}
-.footer-top p{
-    color: #ffffff;
-}
-.footer-top button{
-    background-color: #FF3E55;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #ffffff;
-    transition: 0.3s;
-}
-.footer-top button:hover{
-    background-color: #ffffff;
-    color: #FF3E55;
-}
-.top-three ul li{
-    list-style: none;
-    margin: 5px 0;
+.top-one {
+  margin-right: 100px;
 }
 
-@media (max-width:991px){
-    /* .footer-top{
+.top-one a i {
+  font-size: 15px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.top-one i:hover {
+  background-color: #ffffff;
+  color: #ff3e55;
+  opacity: 0.9;
+}
+.top-one .facebook-icon {
+  background-color: #0c88ef;
+}
+.top-one .linkedin-icon {
+  background-color: #0a66c2;
+}
+.top-one .youtube-icon {
+  background-color: #ff3e55;
+}
+.top-one .instagram-icon {
+  margin-right: 0;
+  background-color: #f67930;
+}
+.top-two {
+  margin-left: 30px;
+}
+.top-two ul {
+  padding-left: 0;
+}
+.top-two ul li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+.footer-top h3 {
+  position: relative;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+.footer-top h3::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #0b2f6e71;
+}
+.footer-top h3::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  left: 0 !important;
+  bottom: 0;
+  left: inherit;
+  position: absolute;
+  z-index: 1;
+  background-color: #ff3e55;
+}
+.footer-top p {
+  color: #ffffff;
+}
+.footer-top button {
+  background-color: #ff3e55;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.footer-top button:hover {
+  background-color: #ffffff;
+  color: #ff3e55;
+}
+.top-three ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+@media (max-width: 991px) {
+  /* .footer-top{
         text-align: center;
     } */
-    .top-one{
-        margin-bottom: 30px;
-    }
-    .top-two{
-        margin-bottom: 30px;
-    }
-    .top-three{
-        margin-bottom: 30px;
-    }
-    .top-two{
-        margin-left: 0;
-    }
-/* }
+  .top-one {
+    margin-bottom: 30px;
+  }
+  .top-two {
+    margin-bottom: 30px;
+  }
+  .top-three {
+    margin-bottom: 30px;
+  }
+  .top-two {
+    margin-left: 0;
+  }
+  /* }
 
 @media (max-width:575px){ */
-    .footer-top{
-        text-align: center;
-    }
-    .top-one{
-        margin-right: 0;
-    }
-    .footer-top h3::before{
-        left: 50%;
-        width: 35%;
-        transform: translateX(-50%);
-    }
-    .footer-top h3::after{
-        left: 32% !important;
-    }
+  .footer-top {
+    text-align: center;
+  }
+  .top-one {
+    margin-right: 0;
+  }
+  .footer-top h3::before {
+    left: 50%;
+    width: 35%;
+    transform: translateX(-50%);
+  }
+  .footer-top h3::after {
+    left: 32% !important;
+  }
 }

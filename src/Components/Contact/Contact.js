@@ -5,9 +5,9 @@ import Row from "react-bootstrap/esm/Row";
 import "./Contact.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
 import ContactImage from "../../images/contactimage.jpg";
 import { sendEmail, initEmailJS } from "../../utils/emailService";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,9 +15,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
-  const [alertVariant, setAlertVariant] = useState("success");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Initialize EmailJS when component mounts
@@ -39,9 +36,14 @@ const Contact = () => {
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      setAlertMessage("Please fill in all fields.");
-      setAlertVariant("danger");
-      setShowAlert(true);
+      toast.error("Please fill in all fields.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       setIsSubmitting(false);
       return;
     }
@@ -50,11 +52,14 @@ const Contact = () => {
       // Send email using EmailJS
       await sendEmail(formData);
 
-      setAlertMessage(
-        "Your message has been sent successfully! We will contact you soon."
-      );
-      setAlertVariant("success");
-      setShowAlert(true);
+      toast.success("Your message has been sent successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
 
       // Reset form
       setFormData({
@@ -63,11 +68,17 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
-      setAlertMessage(
-        "Sorry, there was an error sending your message. Please try again."
+      toast.error(
+        "Sorry, there was an error sending your message. Please try again.",
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
       );
-      setAlertVariant("danger");
-      setShowAlert(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -80,7 +91,9 @@ const Contact = () => {
           <h5 className="text-center mb-3 contact-subheading">
             \ Contact Us \
           </h5>
-          <h2 className="text-center mb-5">We Will Reach You Soon!</h2>
+          <h2 className="text-center mb-5 text-black">
+            We Will Reach You Soon!
+          </h2>
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="contact-image">
@@ -90,16 +103,6 @@ const Contact = () => {
             <Col lg={6}>
               <div className="contact-form">
                 <h3 className="mb-4">Do You Want To Get In Touch?</h3>
-
-                {showAlert && (
-                  <Alert
-                    variant={alertVariant}
-                    onClose={() => setShowAlert(false)}
-                    dismissible
-                    className="mb-3">
-                    {alertMessage}
-                  </Alert>
-                )}
 
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" controlId="formName">

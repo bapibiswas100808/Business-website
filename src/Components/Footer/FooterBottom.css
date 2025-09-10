@@ -1,58 +1,61 @@
-.footer-bottom{
-    background-color: #0d1e50;
-    color: #ffffff;
-    border-top: 1px solid #0c0e1371;
-    padding: 10px 0;
+.footer-bottom {
+  background-color: #0d1e50;
+  color: #ffffff;
+  border-top: 1px solid #0c0e1371;
+  padding: 10px 0;
 }
-.footer-logo{
-    position: relative;
+.footer-logo {
+  position: relative;
 }
-.footer-logo img{
-    height: 50px;
-    width: auto;
+.footer-logo h2 {
+  color: #ff3e55;
 }
-.footer-logo::before{
-    position: absolute;
-    content: "";
-    height: 85px;
-    width: 100px;
-    clip-path: polygon(145% 0, 100% 100%, 0 100%);
-    top: -78px;
-    background-color: #FF3E55;
-    
+.footer-logo img {
+  height: 50px;
+  width: auto;
 }
-.footer-logo::after{
-    position: absolute;
-    content: "";
-    height: 42px;
-    width: 23px;
-    clip-path: polygon(0 0, 100% 150%, 0 100%);
-    bottom: 60px;
-    background-color: #FF3E55;
-    opacity: 0.8;
+.footer-logo::before {
+  position: absolute;
+  content: "";
+  height: 82px;
+  width: 120px;
+  clip-path: polygon(145% 0, 100% 100%, 0 100%);
+  top: -82px;
+  background-color: #ff3e55;
 }
-.footer-bottom p{
-    margin-bottom: 0;
-    text-align: right;
+.footer-logo::after {
+  position: absolute;
+  content: "";
+  height: 42px;
+  width: 23px;
+  clip-path: polygon(0 0, 100% 150%, 0 100%);
+  bottom: 40px;
+  left: 120px;
+  background-color: #ff3e55;
+  opacity: 0.8;
 }
-.footer-bottom .bottom-elements{
-    align-items: center;
+.footer-bottom p {
+  margin-bottom: 0;
+  text-align: right;
 }
-.footer-bottom span{
-    color: #FF3E55;
+.footer-bottom .bottom-elements {
+  align-items: center;
 }
-
-@media (max-width:991px){
-    .footer-bottom p{
-        font-size: 12px;
-    }
+.footer-bottom span {
+  color: #ff3e55;
 }
 
-@media (max-width:575px){
-    .footer-logo{
-        margin-bottom: 20px;
-    }
-    .footer-bottom p{
-        text-align: center;
-    }
+@media (max-width: 991px) {
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+  .footer-bottom p {
+    text-align: center;
+  }
 }
